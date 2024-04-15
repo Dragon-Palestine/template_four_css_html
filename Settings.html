@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="Settings.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="framwork.css">
+
+</head>
+<body>
+
+<!-- Start page -->
+<div class="page">
+<!-- Start sidebar -->
+<div class="sidebar box-sh-min ">
+    <div class="hold">
+    <h2>Loai</h2>
+
+    <ul class="flex flex-d-c al-s">
+        <li>
+            <a  href="index.html">
+                <i class="fa-regular fa-chart-bar fa-fw"></i>
+                <p>Dashboard</p>
+            </a>
+        </li>
+        <li>
+            <a class="active" href="Settings.html">
+                <i class="fa-solid fa-gear fa-fw"></i>
+                <p>Settings</p>
+            </a>
+        </li>
+        <li>
+            <a href="Profile.html">
+                <i class="fa-regular fa-user fa-fw"></i>
+                <p>Profile</p>
+            </a>
+        </li>
+        <li>
+            <a href="Projects.html">
+                <i class="fa-solid fa-diagram-project fa-fw"></i>
+                <p>Projects</p>
+            </a>
+        </li>
+        <li>
+            <a href="Courses.html">
+                <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                <p>Courses</p>
+            </a>
+        </li>
+        <li>
+            <a href="Friends.html">
+                <i class="fa-regular fa-circle-user fa-fw"></i>
+                <p>Friends</p>
+            </a>
+        </li>
+        <li>
+            <a href="Files.html">
+                <i class="fa-regular fa-file fa-fw"></i>
+                <p>Files</p>
+            </a>
+        </li>
+        <li>
+            <a href="Plans.html">
+                <i class="fa-regular fa-credit-card fa-fw"></i>
+                <p>Plans</p>
+            </a>
+        </li>
+    </ul>
+  </div>
+
+</div>
+<!-- End sidebar -->
+
+<!-- Start hea-con -->
+<div class="hea-con">
+<!-- Start header -->
+ <header>
+    <div class="flex ju-b">
+        <div class="hold-input">
+            <input type="search" placeholder="Type A Keyword">
+        </div>
+        <div class="flex al-c">
+            <i class="fa-regular fa-bell fa-lg"></i>
+            <img src="img/avatar.png" alt="">
+        </div>
+    </div>
+ </header>
+ <!-- End header --> 
+
+
+<!-- Start content -->
+
+<div class="content">
+ <h1>Settings</h1>
+ 
+ <div class="boxies ">
+    <div class="siteControl bac-white border-r-8 p-15">
+        <div class="top m-b-20">
+            <h3>Site Control</h3>
+            <p class="c-777 font-s m-t-5">Control The Website If There Is Maintenance</p>
+        </div>
+       <div class="flex ju-b al-c m-b-50">
+        <div>
+            <p>Website Control</p>
+            <p class="c-777 font-s m-t-5 ">Open/Close Website And Type The Reason</p>
+        </div>
+        <div class="check">
+            <label for="in">
+                <input id="in" type="checkbox" checked>
+                <div class="pol"></div>
+            </label>
+        </div>
+       </div>
+       <textarea class=" textarea border-r-8 border" placeholder="Close Message Content"></textarea>
+    </div>
+
+    <div class="generalInfo bac-white border-r-8 p-15">
+        <div class="top m-b-50">
+            <h3>General Info</h3>
+            <p class="c-777 m-t-10">General Information About Your Account</p>
+        </div>
+
+        <form class="c-777" action="">
+            <label for="first">First Name</label>
+            <input class="p-10 w-100 border border-r-20 m-b-20 m-t-10" id="first" type="text" placeholder="First Name">
+
+            <label for="Last">Last Name</label>
+            <input class="p-10 w-100 border border-r-20 m-b-20 m-t-10" id="Last" type="text" placeholder="Last Name">
+
+            <label class="block" for="email">Email</label>
+            <input class="p-10 opacity border border-r-20 m-b-20 bac-eee2 w-80 m-t-10" id="email" type="email" value="l@gmail.com" disabled>
+            <a class="c-min inline m-l-10" href="#">Change</a>
+
+        </form>
+    </div>
+
+    <div class="securityInfo bac-white border-r-8 p-15">
+        <div class="top m-b-50">
+            <h3>Security Info</h3>
+            <p class="c-777 m-t-10">Security Information About Your Account</p>
+        </div>
+        <div class="pass flex ju-b p-b-15 border-b m-b-20">
+           <div class="text">
+            <p>password</p>
+            <p class="c-777 font-s m-t-5">Last Change On 25/10/2021</p>
+           </div>
+           <a class="c-white bac-min p-5 w-fi border-r-8 flex al-c" href="#">Change</a>
+        </div>
+        <div class="factor flex ju-b p-b-15 border-b m-b-20">
+            <div class="text">
+                <p>Two-Factor Authentication</p>
+                <p class="c-777 font-s m-t-5">Enable/Disable The Feature</p>
+            </div>
+            <div class="check">
+                <label for="in2">
+                    <input id="in2" type="checkbox" checked>
+                    <div class="pol"></div>
+                </label>
+            </div>
+        </div>
+        <div class="devices flex ju-b m-b-50">
+            <div class="text">
+                <h3>Devices</h3>
+                <p class="c-777 font-s m-t-5">Check The Login Devices List</p>
+            </div>
+            <a class="bac-eee p-5 w-fi border-r-8 flex al-c" href="#">Change</a>
+        </div>
+    </div>
+
+    <div class="socialInfo bac-white border-r-8 p-15">
+        <div class="top m-b-50">
+            <h3>Social Info</h3>
+            <p class="c-777 m-t-10">Social Media Information</p>
+        </div>
+        <div class="twitter border-r-8 border m-b-20 bac-eee2 over-h ">
+            <i class="fa-brands fa-facebook-f c-777 border p-15"></i>
+            <p class="c-777 m-l-10 inline">Twitter Username</p>
+        </div>
+        <div class="Facebook border-r-8 border m-b-20 bac-eee2 over-h">
+            <i class="fa-brands fa-twitter c-777 border p-15"></i>
+            <p class="c-777 m-l-10 inline">Facebook Username</p>
+        </div>
+        <div class="Linkedin border-r-8 border m-b-20 bac-eee2 over-h ">
+            <i class="fa-brands fa-linkedin c-777 border p-15"></i>
+            <p class="c-777 m-l-10 inline">Linkedin Username</p>
+        </div>
+        <div class="Youtube border-r-8 border m-b-20 bac-eee2 over-h">
+            <i class="fa-brands fa-youtube c-777 border p-15"></i>
+            <p class="c-777 m-l-10 inline">Youtube Username</p>
+        </div>
+    </div>
+
+    <div class="widgetsControl bac-white border-r-8 p-15">
+        <div class="top m-b-20">
+            <h3>Widgets Control</h3>
+            <p class="c-777 font-s m-t-10">Show/Hide Widgets</p>
+        </div>
+
+        <div class="widgets">
+            <label class="m-b-20 flex al-c gap-10 pointer" for="Draft">
+                <input id="Draft" type="checkbox" checked >
+                <div class="su border-r-8 p-r flex al-c ju-c over-h"></div>
+                Quick Draft
+            </label>
+
+            <label class="m-b-20 flex al-c gap-10 pointer" for="Targets">
+                <input id="Targets" type="checkbox" checked >
+                <div class="su border-r-8 p-r flex al-c ju-c over-h"></div>
+                Yearly Targets
+            </label>
+
+            <label class="m-b-20 flex al-c gap-10 pointer" for="Statistics">
+                <input id="Statistics" type="checkbox" checked>
+                <div class="su border-r-8 p-r flex al-c ju-c over-h"></div>
+                Tickets Statistics
+            </label>
+
+            <label class="m-b-20 flex al-c gap-10 pointer" for="News">
+                <input id="News" type="checkbox" checked >
+                <div class="su border-r-8 p-r flex al-c ju-c over-h"></div>
+                Latest News
+            </label>
+
+           <label class="m-b-20 flex al-c gap-10 pointer" for="Tasks">
+              <input id="Tasks" type="checkbox" >
+              <div class="su border-r-8 p-r flex al-c ju-c over-h"></div>
+              Latest Tasks
+          </label>
+
+          <label class="m-b-50 flex al-c gap-10 pointer" for="Items">
+                <input id="Items" type="checkbox" checked>
+                <div class="su border-r-8 p-r flex al-c ju-c over-h"></div>
+                Top Search Items
+          </label>
+
+        </div>
+    </div>
+
+    <div class="backupManager bac-white border-r-8 p-15">
+       <div class="top m-b-20">
+        <h3>Backup Manager</h3>
+        <p class="c-777 m-t-10">Control Backup Time And Location</p>
+       </div>
+       <div class="Time">
+        <label class="m-b-20 flex al-c gap-10 pointer" for="Day">
+            <input id="Day" type="radio" checked>
+            <div class="radio"></div>
+            Daily
+        </label>
+
+        <label class="m-b-20 flex al-c gap-10 pointer" for="week">
+            <input id="week" type="radio">
+            <div class="radio"></div>
+            Weekly
+        </label>
+
+        <label class="m-b-20 flex al-c gap-10 pointer" for="Month">
+            <input id="Month" type="radio" >
+            <div class="radio"></div>
+            monthly
+        </label>
+
+       </div>
+    </div>
+
+
+    
+ </div>
+ </div>
+
+<!-- End content -->
+
+</div>
+<!-- End hea-con -->
+
+</div>
+<!-- End page -->
+
+
+    
+</body>
+</html>

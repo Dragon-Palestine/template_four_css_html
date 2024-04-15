@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  ul{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  :root{
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-right: 92px;
+    --section-background: #eee;
+    --border-radius: 8px;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  input{
+    cursor: pointer;
+  }
+  input:focus{
+    outline: none;
+  }
+  body{
+    font-family: "Cairo", sans-serif;
+  }
+/* -------------------- */
+.check label{
+    width: 130px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #eee;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 4px;
+}
+.check label input{
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.check label .pol{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check label .pol::before{
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    position: absolute;
+    font-weight: 900;
+    color: #eee;
+    cursor: pointer;
+}
+.check input:checked + .pol::before{
+   content: '\f00c';
+}
+.check label:has(:checked){
+    background-color: var(--blue-color);
+    justify-content: end;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+@media (max-width:767px){
+    .check label{
+        margin: auto;
+    }
+}
+/* -------------------- */
+.content .name .file .line{
+    width: 80%;
+    height: 5px;
+    background-image: linear-gradient(to right,var(--blue-color) 70%,#eee 70%);
+    border-radius: var(--border-radius);
+}
+.content .name .information > div:hover{
+    background-color: #f9f9f9;
+    transition: var(--main-transition);
+}
+@media (max-width:767px){
+    .content .name .information {
+        width: 100%;
+    }
+}
+
+.content .skils-activities .skils{
+    width: 40%;
+}
+@media (max-width:767px){
+    .content .skils-activities .skils{
+        width: 100% ;
+    }
+}
+.content .skils-activities .activities{
+    width: 60%;
+}
+@media (max-width:767px){
+    .content .skils-activities .activities{
+        width: 100% ;
+    }
+}

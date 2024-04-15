@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  ul{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  :root{
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-right: 92px;
+    --section-background: #eee;
+    --border-radius: 8px;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  input{
+    cursor: pointer;
+  }
+  input:focus{
+    outline: none;
+  }
+  body{
+    font-family: "Cairo", sans-serif;
+  }
+
+/* -------------------- */
+.check label{
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #eee;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 4px;
+}
+.check label input{
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.check label .pol{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check label .pol::before{
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    position: absolute;
+    font-weight: 900;
+    color: #eee;
+    cursor: pointer;
+}
+.check input:checked + .pol::before{
+   content: '\f00c';
+}
+.check label:has(:checked){
+    background-color: var(--blue-color);
+    justify-content: end;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+/* -------------------- */
+
+.content .boxies{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 20px;
+}
+
+.content .boxies .widgetsControl > div input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;   
+}
+.content .boxies .widgetsControl > div .su{
+    border: 1px solid var(--blue-color);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.content .boxies .widgetsControl > div .su::before{
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    position: absolute;
+    color: white;
+    font-weight: 900;
+    background-color: var(--blue-color);
+    border-radius: var(--border-radius);
+    font-size: 0;
+    border-radius: 0;
+    padding: 0;
+    transition: var(--main-transition);
+}
+.content .boxies .widgetsControl > div input[type="checkbox"]:checked + .su::before{
+    transform: rotate(1turn);
+    font-size: 13px;
+    padding: 5px;
+    border-radius: var(--border-radius);
+}
+
+.content .boxies .backupManager .Time > label input{
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.content .boxies .backupManager .Time > label .radio{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .boxies .backupManager .Time > label .radio::before{
+    content: '';
+    position: absolute;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    transform: scale(0);
+    transition: var(--main-transition);
+}
+.content .boxies .backupManager .Time label > input[type="radio"]:checked + div::before{
+    transform: scale(1);
+    z-index: 2;
+}
+

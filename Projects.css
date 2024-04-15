@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  ul{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  :root{
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-right: 92px;
+    --section-background: #eee;
+    --border-radius: 8px;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  input{
+    cursor: pointer;
+  }
+  input:focus{
+    outline: none;
+  }
+  body{
+    font-family: "Cairo", sans-serif;
+  }
+
+  .content .boxies{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 20px;
+}
+.content .boxies .box .imgs img{
+  border: 5px solid white;
+  border-radius: 50%;
+  width: 50px;
+}
+.content .boxies .box .imgs img:nth-child(2){
+  transform: translateX(-15px);
+}
+.content .boxies .box .imgs img:nth-child(3){
+  transform: translateX(-30px);
+}
+.content .boxies .box .imgs img:nth-child(4){
+  transform: translateX(-45px);
+}
+.content .boxies .box .imgs img:nth-child(5){
+  transform: translateX(-60px);
+}
+.content .boxies .box .foot .line{
+    width: 50%;
+    height: 7px;
+    border-radius: var(--border-radius);
+}
+.content .boxies .box:nth-child(1) .foot .line{
+  background-image: linear-gradient(to right,var(--red-color) 50%,#eee 50%);
+}
+.content .boxies .box:nth-child(2) .foot .line{
+  background-image: linear-gradient(to right,var(--green-color) 80%,#eee 80%);
+}
+.content .boxies .box:nth-child(3) .foot .line{
+  background-color: var(--blue-color);
+}
+.content .boxies .box:nth-child(4) .foot .line{
+  background-image: linear-gradient(to right,var(--green-color) 50%,#eee 50%);
+}
+.content .boxies .box:nth-child(5) .foot .line{
+  background-image: linear-gradient(to right,var(--green-color) 70%,#eee 70%);
+}
+.content .boxies .box:nth-child(6) .foot .line{
+  background-image: linear-gradient(to right,var(--red-color) 30%,#eee 30%);
+}
+.content .boxies .box:nth-child(7) .foot .line{
+  background-image: linear-gradient(to right,var(--orange-color) 60%,#eee 60%);
+}
+.content .boxies .box:nth-child(8) .foot .line{
+  background-image: linear-gradient(to right,var(--green-color) 95%,#eee 95%);
+}
+.content .boxies .box:nth-child(9) .foot .line{
+  background-image: linear-gradient(to right,var(--orange-color) 20%,#eee 20%);
+}

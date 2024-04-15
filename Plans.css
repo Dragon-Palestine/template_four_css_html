@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  ul{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  :root{
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-right: 92px;
+    --section-background: #eee;
+    --border-radius: 8px;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  input{
+    cursor: pointer;
+  }
+  input:focus{
+    outline: none;
+  }
+  body{
+    font-family: "Cairo", sans-serif;
+  }
+
+ .content .boxies{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+    margin: 0 15px;
+    gap: 20px;
+  }
+  .content .boxies .box:nth-child(1) .top{
+    border: 3px solid white;
+    outline: 3px solid var(--green-color);
+  }
+  .content .boxies .box:nth-child(2) .top{
+    border: 3px solid white;
+    outline: 3px solid var(--blue-color);
+  }
+  .content .boxies .box:nth-child(3) .top{
+    border: 3px solid white;
+    outline: 3px solid var(--orange-color);
+  }
+  .content .boxies .box .top p:last-child{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+  }

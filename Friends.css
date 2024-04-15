@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  ul{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  :root{
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-right: 92px;
+    --section-background: #eee;
+    --border-radius: 8px;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  input{
+    cursor: pointer;
+  }
+  input:focus{
+    outline: none;
+  }
+  body{
+    font-family: "Cairo", sans-serif;
+  }
+
+.content .boxies{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+.content .boxies .box:nth-child(1)::after,
+.content .boxies .box:nth-child(8)::after,
+.content .boxies .box:nth-child(9)::after{
+    content: 'VIP';
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+    color: var(--orange-color);
+    opacity: 0.2;
+    width: 100px;
+    height: 100px;
+    font-size: 55px;
+}
+.content .boxies .box .top .hold-i:hover{
+    background-color: var(--blue-color);
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+.content .boxies .box .top .hold-i:hover > i{
+    color: white;
+    transition: var(--main-transition);
+    cursor: pointer;
+}

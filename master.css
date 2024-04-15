@@ -1,0 +1,398 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  ul{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  :root{
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-right: 92px;
+    --section-background: #eee;
+    --border-radius: 8px;
+    --fa-style-family-classic: "Font Awesome 6 Free";
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  input{
+    cursor: pointer;
+  }
+  body{
+    font-family: "Cairo", sans-serif;
+  }
+  
+.content .boxies{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 20px;
+}
+
+.content .boxies  div  .top p{    
+    margin-top: 5px;
+    color: #777;
+}
+.button{
+    
+    display: block;
+        
+    text-align: end;
+        
+    background-color: var(--blue-color);
+        
+    color: white;
+        
+    width: fit-content;
+        
+    border-radius: var(--border-radius);
+        
+    padding: 5px 10px;
+        
+    margin-top: 15px;
+        
+    margin-bottom: 70px;
+
+    border: none;
+
+    position: absolute;
+
+    right: 15px;
+    }
+    .button:hover{
+        background-color: var(--blue-alt-color);
+        transition: var(--main-transition);
+    }    
+
+.content .boxies .welcome .first img{
+    width: 150px;
+}
+
+.content .boxies .welcome .second{
+    
+padding: 25px 10px;
+    
+margin-top: 50px;
+    
+border: 1px solid #eee;
+    
+border-left: none;
+    
+border-right: none;
+}
+.content .boxies .welcome .second::before{
+    content: '';
+    position: absolute;
+    background-image: url(img/avatar.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    top: -50%;
+    transform: translateY(-60%);
+    border: 5px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px #ccc;
+    
+}
+.content .boxies .welcome .second > div p{
+    margin-top: 5px;
+    color: #777;
+}
+
+.content .boxies .quickDraft form input:first-child{
+ height: 30px;
+}
+.content .boxies .quickDraft form textarea{
+ height: 150px;
+}
+.content .boxies .quickDraft form input:first-child:focus,
+.content .boxies .quickDraft form textarea:focus{
+    outline: none;
+}
+
+.content .boxies .yearlyTargets > div i:first-child{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+}
+.content .boxies .yearlyTargets > div .c-min{
+    background-color: #0075ff57;
+}
+.content .boxies .yearlyTargets > div .c-orange{
+    background-color: #f59e0b66;
+}
+.content .boxies .yearlyTargets > div .c-green{
+    background-color: #22c55e57;
+}
+.content .boxies .yearlyTargets .line{
+    height: 3px;
+    background-image: linear-gradient(to right,var(--blue-color) 80%,#0075ff57 80%);
+    margin-top: 10px;
+}
+.content .boxies .yearlyTargets .l2{
+    background-image: linear-gradient(to right,var(--orange-color) 55%,#f59e0b66 55%);
+ }
+ .content .boxies .yearlyTargets .l3{
+    background-image: linear-gradient(to right,var(--green-color) 75%,#22c55e57 75%);
+ }
+.content .boxies .yearlyTargets .line::after{
+    content: '80%';
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    padding: 3px 5px;
+    border-radius: var(--border-radius);
+    color: white;
+    left: 80%;
+    top: -34px;
+    transform: translateX(-50%);
+    background-color: var(--blue-color);
+    font-size: small;
+ }
+ .content .boxies .yearlyTargets .line::before{
+    content: '';
+    position: absolute;
+    border: 7px solid;
+    border-bottom-color:transparent;
+    border-top-color: var(--blue-color);
+    border-left-color:transparent;
+    border-right-color:transparent;
+    left: 80%;
+    top: -11px;
+    transform: translateX(-50%);
+ }
+ .content .boxies .yearlyTargets .l2::after{
+    content: '55%';
+    left: 55%;
+    background-color: var(--orange-color);
+ }
+ .content .boxies .yearlyTargets .l2::before{
+    left: 55%;
+    border-top-color: var(--orange-color);
+ }
+ .content .boxies .yearlyTargets .l3::after{
+    content: '75%';
+    left: 75%;
+    background-color: var(--green-color);
+ }
+ .content .boxies .yearlyTargets .l3::before{
+    left: 75%;
+    border-top-color: var(--green-color);
+
+ }
+
+ .content .boxies .ticketsStatistics .tickets > div{
+    width: 48%;
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 30px 0;
+
+ }
+ @media (max-width:767px){
+    .content .boxies .ticketsStatistics .tickets > div{
+       width: 100% ;
+    }
+}
+.content .boxies .yearlyTargets .latests .latest:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+.content .boxies .yearlyTargets .latests .latest img{
+    width: 20%;
+    margin: 15px;
+    margin-left: 0;
+}
+.content .boxies .yearlyTargets .latests .latest .text{
+    width: 50%;
+}
+.content .boxies .yearlyTargets .latests .latest >  p:last-child{
+    padding: 3px;
+    border-radius: var(--border-radius);
+    max-width: 20%;
+    margin-top: 10px;
+}
+
+@media (max-width:767px){
+    .content .boxies .yearlyTargets .latests .latest{
+       flex-direction: column;
+       text-align: center;
+    }
+}
+
+.content .boxies .latestTasks .latestes .latest:not(:last-child){
+    border-bottom: 1px solid #eee;
+}
+
+.content .boxies .latestTasks .latestes .latest:nth-child(4){
+    opacity: 0.5;
+}
+
+.content .boxies .latestTasks .latestes .latest:not(:nth-child(4)) i:hover{
+    color: #f44336;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.content .boxies .lastProjectProgress .lastes::before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    height: 100%;
+    width: 2px;
+    background-color: var(--blue-color);
+}
+.content .boxies .lastProjectProgress .lastes > div{
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+.content .boxies .lastProjectProgress .lastes > div p:first-child{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid var(--blue-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.content .boxies .lastProjectProgress .lastes > div:not(:last-child) p:first-child::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--blue-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    
+}
+.content .boxies .lastProjectProgress::after{
+    content: '';
+    position: absolute;
+    background-image: url(img/project.png);
+    width: 170px;
+    height: 170px;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.2;
+    background-size: cover;
+}
+.content .boxies .lastProjectProgress .lastes > div:nth-child(4) p:first-child::before{
+    animation: bac-opa 1s linear 0s infinite alternate ;
+
+
+}
+@keyframes bac-opa{
+    to{
+        opacity: 0;
+    }
+
+}
+
+.content .boxies .socialMediaStats > div{
+    height: 70px;
+    align-items: center;
+    border-radius: var(--border-radius);
+    padding: 0 15px;
+    padding-left: 0;
+    overflow: hidden;
+}
+.content .boxies .socialMediaStats .twitter{
+    background-color: #0075ff59;
+}
+.content .boxies .socialMediaStats .facebook{
+    background-color: #0d69d58c;
+}
+.content .boxies .socialMediaStats .youtube{
+    background-color: #f4433669;
+}
+.content .boxies .socialMediaStats .linkedin{
+    background-color: #0077b56b;
+    
+}
+
+.content .boxies .projects {
+    width: calc(100vw - 270px);
+}
+@media (max-width:767px){
+    .content .boxies .projects {
+        width: 97%;
+    }
+}
+.content .boxies .projects .hold-table{
+    overflow-x: auto;
+}
+.content .boxies .projects table{
+
+width: 100%;
+
+border-spacing: 0;
+}
+
+.content .boxies .projects table thead tr{
+    
+background-color: var(--section-background);
+}
+.content .boxies .projects table thead tr th{text-align: start;padding: 10px 5px;}
+.content .boxies .projects table tbody tr:hover{
+    background-color: #eeeeee39;
+    transition: var(--main-transition);
+
+}
+.content .boxies .projects table tbody td{
+    
+border: 0.5px solid #eee;
+    
+padding: 15px 17px;
+    
+border-top: none;
+    
+border-right: none;
+}
+.content .boxies .projects table tbody td:nth-child(5){
+    
+display: flex;
+    
+padding: 26px 15px;
+}
+.content .boxies .projects table tbody td:nth-child(5) img{
+    width: 35px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.content .boxies .projects table tbody td:nth-child(5) img:nth-child(2){
+    transform: translateX(-10px);   
+}
+.content .boxies .projects table tbody td:nth-child(5) img:nth-child(3){
+    transform: translateX(-20px);   
+}
+.content .boxies .projects table tbody td:nth-child(5) img:nth-child(4){
+    transform: translateX(-30px);     
+}
+.content .boxies .projects table tbody td:last-child{
+  border-right: 1px solid #eee;
+}
+
+/* End content */
+/* End hea-con */
+
